@@ -1,0 +1,31 @@
+
+#����Ӧ�ö˿�
+server:
+  port: 8292
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    # Mycat����
+    url: jdbc:mysql://172.17.30.20:8066/TESTDB?useUnicode=true&characterEncoding=UTF8
+    username: root
+    password: 123456
+
+# MyBatishttps://www.cnblogs.com/kingsonfu/p/10628409.html
+mybatis:
+  type-aliases-package: com.example.mycatdemo.domain
+  mapper-locations: classpath:/mybatis/*.xml
+  #sql��ӡ����
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+swagger:
+  title: minos-manager 接口文档
+  description: 风控后台系统 Swagger接口API V1.0
+  version: 1.0.0
+  termsOfServiceUrl:
+  contactName:
+  contactUrl:
+  contactEmail:
+  license:
+  licenseUrl:
+  enabled: true
